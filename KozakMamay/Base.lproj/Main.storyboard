@@ -18,8 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mamayWhite" translatesAutoresizingMaskIntoConstraints="NO" id="WNE-x6-y1W" userLabel="kozakView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cossack  Mamay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="347-AA-g8a">
+                                <rect key="frame" x="107" y="228" width="200" height="126.5"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tty-Xs-NH0">
-                                <rect key="frame" x="182" y="562" width="50" height="150"/>
+                                <rect key="frame" x="182" y="612" width="50" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly6-4s-eXc" userLabel="goButton">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -37,19 +46,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="347-AA-g8a">
-                                <rect key="frame" x="166" y="271" width="82" height="40"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="WNE-x6-y1W" firstAttribute="top" secondItem="U78-C6-OK7" secondAttribute="top" id="4EG-rp-F0L"/>
                             <constraint firstItem="347-AA-g8a" firstAttribute="centerX" secondItem="U78-C6-OK7" secondAttribute="centerX" id="4U9-7x-cUj"/>
+                            <constraint firstItem="Y5J-r7-362" firstAttribute="trailing" secondItem="WNE-x6-y1W" secondAttribute="trailing" id="NHy-J5-b0n"/>
                             <constraint firstItem="347-AA-g8a" firstAttribute="centerY" secondItem="U78-C6-OK7" secondAttribute="centerY" multiplier="0.65" id="U9m-fr-d4d"/>
+                            <constraint firstAttribute="bottom" secondItem="WNE-x6-y1W" secondAttribute="bottom" id="aAg-XV-TZr"/>
+                            <constraint firstItem="WNE-x6-y1W" firstAttribute="leading" secondItem="Y5J-r7-362" secondAttribute="leading" id="bNg-57-W6s"/>
                             <constraint firstItem="tty-Xs-NH0" firstAttribute="centerX" secondItem="U78-C6-OK7" secondAttribute="centerX" id="p7W-PW-RVg"/>
-                            <constraint firstItem="Y5J-r7-362" firstAttribute="bottom" secondItem="tty-Xs-NH0" secondAttribute="bottom" constant="150" id="zap-ee-taw"/>
+                            <constraint firstItem="Y5J-r7-362" firstAttribute="bottom" secondItem="tty-Xs-NH0" secondAttribute="bottom" constant="100" id="zap-ee-taw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y5J-r7-362"/>
                     </view>
@@ -70,14 +77,15 @@
                                 <action selector="closeButtonPressed:" destination="DjV-Ld-FsP" eventType="touchUpInside" id="L9z-8h-2wM"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFf-m8-TFU">
-                            <rect key="frame" x="15" y="135.5" width="270" height="89.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFf-m8-TFU">
+                            <rect key="frame" x="15" y="90.5" width="270" height="179"/>
+                            <string key="text">Cossack Mamay is a Ukrainian folkloric hero, one of the standard characters in traditional Ukrainian itinerant puppet theater, the Vertep.  Point the camera at the painting and see it go live!</string>
                             <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.79607843137254897" green="0.84313725490196079" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="WFf-m8-TFU" firstAttribute="leading" secondItem="lIT-8Z-8ie" secondAttribute="leading" constant="15" id="H0n-uo-5Ep"/>
                         <constraint firstAttribute="trailing" secondItem="WFf-m8-TFU" secondAttribute="trailing" constant="15" id="Ofx-Vq-IdX"/>
@@ -116,11 +124,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29" y="21"/>
         </scene>
     </scenes>
     <resources>
         <image name="camIcon" width="50" height="50"/>
         <image name="closeIcon" width="50" height="50"/>
         <image name="infoIcon" width="50" height="50"/>
+        <image name="mamayWhite" width="1400" height="1199"/>
     </resources>
 </document>

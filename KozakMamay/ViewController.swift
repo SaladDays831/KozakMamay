@@ -21,7 +21,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
@@ -33,9 +33,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
+        let configuration = ARImageTrackingConfiguration()
+        
+        if let trackedImage = ARReferenceImage.referenceImages(inGroupNamed: "KozakImage", bundle: Bundle.main) {
+            
+            configuration.trackingImages = trackedImage
+            configuration.maximumNumberOfTrackedImages = 1
+            
+        }
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -49,14 +54,61 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
+
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        
         let node = SCNNode()
-     
+        
+        
+        if let imageAnchor = anchor as? ARImageAnchor {
+            
+            
+            let imageName = imageAnchor.referenceImage.name!
+            let physicalSizeOfReferenceImage = CGSize(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
+            var preferredWidth: CGFloat = imageAnchor.referenceImage.physicalSize.width
+            var preferredHeight: CGFloat = imageAnchor.referenceImage.physicalSize.height
+            
+            print("""
+                Detected AnchorID = \(imageAnchor.identifier)
+                Detected Reference Image Name = \(imageName)
+                Detected Reference Image Physical Size = (width) \(physicalSizeOfReferenceImage.width),
+                Detected Reference Image Physical Size = (height) \(physicalSizeOfReferenceImage.height)
+                """)
+            
+            
+            let videoNode = SKVideoNode(fileNamed: "videoCV.mp4")
+            
+            videoNode.play()
+            
+            //width: 1920, height: 1080
+            let videoScene = SKScene(size: CGSize(width: 854, height: 480))
+            
+            videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
+            videoNode.yScale = -1.0
+            
+            videoScene.addChild(videoNode)
+            
+            
+            
+            let plane = SCNPlane(width: preferredWidth, height: preferredHeight)
+            
+            
+            plane.firstMaterial?.diffuse.contents = videoScene
+            
+            let planeNode = SCNNode(geometry: plane)
+            
+            planeNode.eulerAngles.x = -.pi / 2
+            
+            node.addChildNode(planeNode)
+            
+        }
+        
         return node
+        
     }
-*/
+    
+    
+    
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
