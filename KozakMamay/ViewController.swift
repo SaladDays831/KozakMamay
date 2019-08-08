@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import AVFoundation
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
@@ -17,6 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -24,10 +26,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = false
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        //let scene = SCNScene(named: "art.scnassets/ship.scn")!
         
         // Set the scene to the view
-        sceneView.scene = scene
+        //sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +60,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         
         let node = SCNNode()
+        //var player = AVPlayer()
         
         
         if let imageAnchor = anchor as? ARImageAnchor {
@@ -76,19 +79,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 """)
             
             
-            let videoNode = SKVideoNode(fileNamed: "videoCV.mp4")
+            let videoNode = SKVideoNode(fileNamed: "test.mp4")
             
             videoNode.play()
             
-            //width: 1920, height: 1080
-            let videoScene = SKScene(size: CGSize(width: 854, height: 480))
+            
+            let videoScene = SKScene(size: CGSize(width: 470, height: 360))
             
             videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
             videoNode.yScale = -1.0
             
             videoScene.addChild(videoNode)
-            
-            
             
             let plane = SCNPlane(width: preferredWidth, height: preferredHeight)
             
@@ -100,6 +101,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             planeNode.eulerAngles.x = -.pi / 2
             
             node.addChildNode(planeNode)
+            
             
         }
         

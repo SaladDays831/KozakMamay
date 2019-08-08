@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B136F5122FBF5F300E91555 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B136F5022FBF5F300E91555 /* test.mp4 */; };
 		4B5F7BAF22FB2CFD004F46EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7BAE22FB2CFD004F46EA /* AppDelegate.swift */; };
 		4B5F7BB322FB2CFD004F46EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7BB222FB2CFD004F46EA /* ViewController.swift */; };
 		4B5F7BB622FB2CFD004F46EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F7BB422FB2CFD004F46EA /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B136F5022FBF5F300E91555 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		4B5F7BAB22FB2CFD004F46EA /* KozakMamay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KozakMamay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5F7BAE22FB2CFD004F46EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B5F7BB222FB2CFD004F46EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		4B5F7BAD22FB2CFD004F46EA /* KozakMamay */ = {
 			isa = PBXGroup;
 			children = (
+				4B136F5022FBF5F300E91555 /* test.mp4 */,
 				4B5F7BAE22FB2CFD004F46EA /* AppDelegate.swift */,
 				4B5F7BC422FB34EB004F46EA /* InitialViewController.swift */,
 				4B5F7BB222FB2CFD004F46EA /* ViewController.swift */,
@@ -127,6 +130,7 @@
 			files = (
 				4B5F7BBB22FB2D00004F46EA /* LaunchScreen.storyboard in Resources */,
 				4B5F7BB822FB2D00004F46EA /* Assets.xcassets in Resources */,
+				4B136F5122FBF5F300E91555 /* test.mp4 in Resources */,
 				4B5F7BB622FB2CFD004F46EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QF3988KG3;
 				INFOPLIST_FILE = KozakMamay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QF3988KG3;
 				INFOPLIST_FILE = KozakMamay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
