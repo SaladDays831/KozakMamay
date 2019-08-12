@@ -17,7 +17,7 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        popUpView.layer.cornerRadius = 5
+        popUpView.layer.cornerRadius = 15
 
         // Do any additional setup after loading the view.
     }

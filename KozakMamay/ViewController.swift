@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import SceneKit
+import Foundation
 import ARKit
-import AVFoundation
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
@@ -60,7 +59,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         
         let node = SCNNode()
-        //var player = AVPlayer()
         
         
         if let imageAnchor = anchor as? ARImageAnchor {
@@ -79,19 +77,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 """)
             
             
-            let videoNode = SKVideoNode(fileNamed: "test.mp4")
+            let videoNode = SKVideoNode(fileNamed: "video.mp4")
             
             videoNode.play()
             
             
-            let videoScene = SKScene(size: CGSize(width: 470, height: 360))
+            let videoScene = SKScene(size: CGSize(width: 1400, height: 1198))
             
             videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
             videoNode.yScale = -1.0
             
             videoScene.addChild(videoNode)
             
+            
+            
             let plane = SCNPlane(width: preferredWidth, height: preferredHeight)
+            //plane.materials = []
             
             
             plane.firstMaterial?.diffuse.contents = videoScene
@@ -101,7 +102,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             planeNode.eulerAngles.x = -.pi / 2
             
             node.addChildNode(planeNode)
-            
             
         }
         
@@ -126,4 +126,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
 }

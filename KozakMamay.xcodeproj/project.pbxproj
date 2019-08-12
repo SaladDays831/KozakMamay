@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B136F5122FBF5F300E91555 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B136F5022FBF5F300E91555 /* test.mp4 */; };
 		4B5F7BAF22FB2CFD004F46EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7BAE22FB2CFD004F46EA /* AppDelegate.swift */; };
 		4B5F7BB322FB2CFD004F46EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7BB222FB2CFD004F46EA /* ViewController.swift */; };
 		4B5F7BB622FB2CFD004F46EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F7BB422FB2CFD004F46EA /* Main.storyboard */; };
 		4B5F7BB822FB2D00004F46EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F7BB722FB2D00004F46EA /* Assets.xcassets */; };
 		4B5F7BBB22FB2D00004F46EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F7BB922FB2D00004F46EA /* LaunchScreen.storyboard */; };
 		4B5F7BC522FB34EB004F46EA /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F7BC422FB34EB004F46EA /* InitialViewController.swift */; };
+		4BE9A90D22FDB48E0004EB0B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4BE9A90C22FDB48E0004EB0B /* video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B136F5022FBF5F300E91555 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		4B5F7BAB22FB2CFD004F46EA /* KozakMamay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KozakMamay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5F7BAE22FB2CFD004F46EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B5F7BB222FB2CFD004F46EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +25,7 @@
 		4B5F7BBA22FB2D00004F46EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B5F7BBC22FB2D00004F46EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B5F7BC422FB34EB004F46EA /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		4BE9A90C22FDB48E0004EB0B /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		4B5F7BAD22FB2CFD004F46EA /* KozakMamay */ = {
 			isa = PBXGroup;
 			children = (
-				4B136F5022FBF5F300E91555 /* test.mp4 */,
+				4BE9A90C22FDB48E0004EB0B /* video.mp4 */,
 				4B5F7BAE22FB2CFD004F46EA /* AppDelegate.swift */,
 				4B5F7BC422FB34EB004F46EA /* InitialViewController.swift */,
 				4B5F7BB222FB2CFD004F46EA /* ViewController.swift */,
@@ -130,8 +130,8 @@
 			files = (
 				4B5F7BBB22FB2D00004F46EA /* LaunchScreen.storyboard in Resources */,
 				4B5F7BB822FB2D00004F46EA /* Assets.xcassets in Resources */,
-				4B136F5122FBF5F300E91555 /* test.mp4 in Resources */,
 				4B5F7BB622FB2CFD004F46EA /* Main.storyboard in Resources */,
+				4BE9A90D22FDB48E0004EB0B /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dkurilo.KozakMamay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dkurilo.KozakMamay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

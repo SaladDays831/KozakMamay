@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -108,9 +107,22 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZU-14-OhF">
+                                <rect key="frame" x="20" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="DGU-Sz-o3u"/>
+                                    <constraint firstAttribute="height" constant="40" id="G5y-LJ-hHx"/>
+                                </constraints>
+                                <state key="normal" image="icons8-back-arrow-50"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dWu-fw-McF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GZU-14-OhF" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" id="8rR-eP-gdW"/>
+                            <constraint firstItem="GZU-14-OhF" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="20" id="9hZ-8l-5cY"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
@@ -130,6 +142,7 @@
     <resources>
         <image name="camIcon" width="50" height="50"/>
         <image name="closeIcon" width="50" height="50"/>
+        <image name="icons8-back-arrow-50" width="50" height="50"/>
         <image name="infoIcon" width="50" height="50"/>
         <image name="mamayWhite" width="1400" height="1199"/>
     </resources>
